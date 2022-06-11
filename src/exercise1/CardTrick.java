@@ -51,8 +51,10 @@ public class CardTrick {
             
 
             //loop-verify if defCard is present
-            for (Card hand1 : hand) {
-                if (hand1.getValue() == defaultCard.getValue() && hand1.getSuit().equalsIgnoreCase(defaultCard.getSuit())) {
+            //for (Card hand1 : hand) {
+              for (int i = 0; i < hand.length; i++){
+
+                if (defaultCard.getValue() == defaultCard.getValue() && defaultCard.getSuit().equalsIgnoreCase(defaultCard.getSuit())) {
                     //System.out.println("The card is being found in hand at index" + (i + 1));
                     flag = true;
                     break;
@@ -71,9 +73,9 @@ public class CardTrick {
             winCard.setSuit(Card.SUITS[2]);
 
             //loop-verify if defCard is present
-            //for (int i = 0; i < hand.length; i++)
-            for (Card hand1 : hand) {
-                if (hand1.getValue() == winCard.getValue() && hand1.getSuit().equalsIgnoreCase(winCard.getSuit())) {
+            for (int i = 0; i < hand.length; i++)
+            //for (Card hand1 : hand) {
+                if (winCard.getValue() == winCard.getValue() && winCard.getSuit().equalsIgnoreCase(winCard.getSuit())) {
                     //System.out.println("The card is being found in hand at index" + (i + 1));
                     flag = true;
                     break;
